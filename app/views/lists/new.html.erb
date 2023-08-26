@@ -4,13 +4,15 @@
   <h1>Create your list 🎬</h1>
 </div>
 
-<div class="container">
+<div class="m-4">
   <div class="row">
-    <div class="col-12">
-      <%= simple_form_for(@list) do |f| %>
-        <%= f.input :name, placeholder: 'Add a list name' %>
-        <%= f.submit "Create", class: "btn btn-primary" %>
-      <% end %>
+    <div class="col-8">
+      <div class="bg-white rounded p-3 shadow">
+        <%= simple_form_for(@list) do |f| %>
+          <%= f.input :name, placeholder: 'Add a list name' %>
+          <%= f.submit "Create", class: "btn btn-primary" %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

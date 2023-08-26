@@ -6,7 +6,7 @@
     <% @list.bookmarks.each do |bookmark| %>
     <% movie_id = bookmark.movie_id %>
     <% movie = Movie.find(movie_id) %>
-    <%= link_to "Delete bookmark", new_list_bookmark_path(@list, bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary" %>
+    <%= link_to "Delete bookmark", new_list_bookmark_path(@list, bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-cancel" %>
     <% end %>
 </div>
 <footer class="footer">
