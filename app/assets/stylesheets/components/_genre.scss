@@ -1,0 +1,33 @@
+.genre {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  text-align: center;
+}
+
+.genre h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.genre p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+// footer
+
+.footer{
+  text-align: center;
+  padding: 30px;
+  background-color: #fff;
+}
+
+.fa-github{
+   color: #150e56;
+}

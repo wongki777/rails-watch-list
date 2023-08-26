@@ -1,3 +1,5 @@
+<div class="createtwo" style="background-image: url(https://images.unsplash.com/photo-1572188863110-46d457c9234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);">
+</div>
 <div class="list-banner">
   <h1>Create your list 🎬</h1>
 </div>
@@ -7,9 +9,11 @@
     <div class="col-12">
       <%= simple_form_for(@list) do |f| %>
         <%= f.input :name, placeholder: 'Add a list name' %>
-        <%= f.input :imageUrl, placeholder: 'Add an image URL' %>
         <%= f.submit "Create", class: "btn btn-primary" %>
       <% end %>
     </div>
   </div>
 </div>
+<footer class="footer">
+  <%= render 'footer' %>
+</footer>

@@ -1,6 +1,9 @@
+<div class="create" style="background-image: url(https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2059&q=80);">
+</div>
 <div class="container py-5">
   <div class="row">
     <div class="col-12 col-md-6 offset-lg-3">
+    <h3>🎥 Add a movie to your <%= @list.name %> list 💿</h3>
       <%= simple_form_for [@list, @bookmark] do |f| %>
         <%= f.input :comment, placeholder: 'Enter a comment here' %>
         <%= f.association :movie %>

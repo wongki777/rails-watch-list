@@ -1,9 +1,14 @@
-<h1><%= @list.name %></h1>
-<ul>
-  <% @bookmarks.each do |bookmark| %>
-  <% movie_id = bookmark.movie_id %>
-  <% movie = Movie.find(movie_id) %>
-  <li> <%= movie.title %> ~ <em>"<%= bookmark.comment %>"</em>
-  <%= link_to "Delete bookmark", list_bookmark_path(@list, bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-  <% end  %>
-</ul>
+<div class="genre" style="background-image: url(https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2056&q=80);">
+    <h1><%= @list.name %></h1>
+</div>
+<div class="container">
+  <%= link_to "Create bookmark",new_list_bookmark_path(@list), class: "btn btn-primary" %>
+    <% @list.bookmarks.each do |bookmark| %>
+    <% movie_id = bookmark.movie_id %>
+    <% movie = Movie.find(movie_id) %>
+    <%= link_to "Delete bookmark", new_list_bookmark_path(@list, bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary" %>
+    <% end %>
+</div>
+<footer class="footer">
+  <%= render 'footer' %>
+</footer>

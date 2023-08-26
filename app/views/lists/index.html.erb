@@ -1,14 +1,24 @@
+<div class="banner" style="background-image: url(https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);">
+  <div class="container">
+    <h1>Save any kind of movies</h1>
+  </div>
+</div>
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1>All Movies 🍿</h1>
-      <ul class="list-group mb-3">
-        <% @lists.each do |list| %>
+     <h1>My Movie Lists 🍿</h1>
+      <%= link_to "Create a movie list", new_list_path, class: "btn btn-primary" %>
+        <ul class="list-group mb-3">
+          <% @lists.each do |list| %>
           <li class="list-group-item">
-            <%= link_to list.name, list_path(list) %>
+          <%= link_to list.name, list_path(list) %>
           </li>
-        <% end %>
-      </ul>
+          <% end %>
+        </ul>
     </div>
   </div>
 </div>
+
+<footer class="footer">
+  <%= render 'footer' %>
+</footer>
